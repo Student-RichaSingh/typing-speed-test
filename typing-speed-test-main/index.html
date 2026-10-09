@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Typing Speed Test</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header >
+    <div class="heading">
+      <img src="./assets/images/logo-small.svg" alt="logo" id="logo-small">
+      <img src="./assets/images/logo-large.svg" alt="logo" id="logo-large">
+      <!--add logo-large.svg for big screens  with js-->
+    </div>
+    <div class="bestScore">
+      <img src="./assets/images/icon-personal-best.svg" alt="icon-personal-best" id="icon-best">
+     <p class="para-color">Best:</p>
+     <p id="best-score">0WPM</p>
+    </div>
+    
+  </header>
+  <main>
+    <div class="stats-container-desktop">
+    <div class="statsBar">
+      <div class="WPM">
+      <p class="para-color">WPM:</p>
+      
+      <span id="wpm">0</span><!-- WPM -->
+      </div>
+     <div class="Accuracy">
+      <p class="para-color">Accuracy:</p>
+      
+      <span id="accuracy">100%</span><!-- Accuracy -->
+     </div>
+      <div class="Time">
+      <p class="para-color">Time:</p> 
+      
+       <span id="time">0:60</span><!-- Time -->
+      </div>
+      
+    </div>
+
+    <div class="Controls">
+     <div class="Difficulty-mobile">
+      <button class="dropdown-btn-difficulty">Hard <img src="./assets/images/icon-down-arrow.svg" ></button>
+      <div class="dropdown-options">
+        <label><input type="radio" name="options_difficulty" id="easy">Easy</label>
+        <label ><input type="radio" name="options_difficulty" id="medium">Medium</label>
+        <label ><input type="radio" name="options_difficulty" id="hard">Hard</label>
+      
+      </div> 
+     </div>
+     <div class="Difficulty-desktop">
+      <p>Difficulty:</p>
+      <button id="easy-btn">Easy</button>
+      <button id="med-btn">Medium</button>
+       <button id="hard-btn">Hard</button>
+     </div>
+    
+
+    <div class="mode-desktop">
+      <p>Mode:</p>
+      <button id="timed-btn">Timed (60s)</button>
+      <button id="passage-btn">Passage</button>
+    </div>
+    <div class="mode-mobile">
+      <button class="dropdown-btn-mode">Timed(60s)<img src="./assets/images/icon-down-arrow.svg" ></button>
+      <div class="dropdown-options">
+        <label><input type="radio" name="options_difficulty_mode" id="timed">Timed(60s)</label>
+        <label ><input type="radio" name="options_difficulty_mode" id="passage">Passage</label>
+      </div>
+    </div>
+    </div>
+     
+    </div>
+    <hr style="color:  hsl(240, 3%, 46%);" id="hr-line">
+    <div class="start">
+     
+      <!-- Passage -->
+       <div class="passage">
+       
+       </div>
+       <input id="typingInput">
+
+      <div class="startbtn">
+        <button>Start Typing Test</button>
+        <p> <b>Or click the text and start typing</b></p>
+      </div>
+     
+
+    </div>
+
+    <div class="result">
+      <!-- Test Complete Start -->
+       <img src="./assets/images/icon-completed.svg" id="result-img">
+      <p id="result-msg-bold">Test Complete!</p>
+      <p id="result-msg">Solid run. Keep pushing to beat your high score.</p>
+
+      <div class="stats">
+        <div class="result-wpm">
+        <p>WPM:</p>
+      <span id="result-wpm">0</span> <!-- WPM -->
+      </div>
+      
+      <div class="result-accuracy">
+        <p> Accuracy:</p>
+        <span id="result-accuracy">0</span> <!-- Accuracy -->
+      </div>
+     
+      <div class="characters">
+        <p>Characters:</p>
+        <span id="result-characters">0</span> <!-- Correct/Incorrect -->
+      </div>
+      </div>
+      
+      <div class="bottom-img">
+        
+      </div>
+
+      <button id="retry">Go Again <img src="./assets/images/icon-restart.svg" ></button>
+      
+
+      <!-- Test Complete End -->
+    </div>
+
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Richa Singh</a>.
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
